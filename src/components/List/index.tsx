@@ -1,4 +1,4 @@
-import './style.scss'
+import styles from './styles.module.scss'
 
 export default function List() {
 
@@ -11,7 +11,7 @@ export default function List() {
   }]
 
   return (
-    <aside className='listaTarefas'>
+    <aside className={styles.listaTarefas}>
       <ul>
         {tasks.map((item, index) => (
           <li key={index} className='item'>

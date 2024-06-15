@@ -1,10 +1,10 @@
 import Button from "../Button";
-import './style.scss'
+import styles from './styles.module.scss'
 
 export default function Form() {
     return (
-        <form className="novaTarefa">
-            <div className="inputContainer">
+        <form className={styles.novaTarefa}>
+            <div className={styles.inputContainer}>
                 <label htmlFor="task">Add a new task</label>
                 <input
                     type="text"
@@ -14,7 +14,7 @@ export default function Form() {
                     required
                 />
             </div>
-            <div className="inputContainer">
+            <div className={styles.inputContainer}>
                 <label htmlFor="time">Time</label>
                 <input
                     type="time"
