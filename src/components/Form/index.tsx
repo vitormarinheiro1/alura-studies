@@ -35,7 +35,7 @@ class Form extends React.Component<{
       <form className={styles.novaTarefa} onSubmit={this.adicionarTarefa.bind(this)}>
         <div className={styles.inputContainer}>
           <label htmlFor="task">
-            Adicione um novo estudo
+            Add a new card
           </label>
           <input
             type="text"
@@ -63,7 +63,7 @@ class Form extends React.Component<{
             required
           />
         </div>
-        <Button type="submit" text='Adicionar' />
+        <Button type="submit" text='Add' />
       </form>
     )
   }

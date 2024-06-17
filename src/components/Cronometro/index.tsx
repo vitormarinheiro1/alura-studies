@@ -10,7 +10,7 @@ export default function Cronometro() {
                 <Relogio />
             </div>
             <Button
-                text="Começar"
+                text="Start"
             />
         </div>
     )
