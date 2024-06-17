@@ -26,7 +26,7 @@ export default function Form() {
                     required
                 />
             </div>
-            <Button />
+            <Button text="Adicionar" />
         </form>
     )
 }

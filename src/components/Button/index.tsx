@@ -1,7 +1,11 @@
 import styles from "./styles.module.scss"
 
-export default function Button() {
+interface ButtonProps {
+    text: string
+}
+
+export default function Button(props: ButtonProps) {
     return(
-        <button className={styles.button}>Button</button>
+        <button className={styles.button}>{props.text}</button>
     )
 }
