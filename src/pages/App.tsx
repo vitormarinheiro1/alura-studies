@@ -7,11 +7,25 @@ import { Itask } from '../types/tarefa';
 
 function App() {
   const [tasks, setTasks] = useState<Itask[]>([]);
+  const [selecionado, setSelecionado] = useState<Itask>();
+
+  function selecionaTarefa(tarefaSelecionada: Itask) {
+    setSelecionado(tarefaSelecionada);
+    setTasks(tarefasAnteriores => tarefasAnteriores.map(task => ({
+      ...task,
+      selecionado: task.id === tarefaSelecionada.id ? true : false
+
+  })));
+  }
+
   return (
     <div className={styles.AppStyle}>
-      <Form setTasks={setTasks}/>
-      <List tasks={tasks} />
-      <Cronometro />
+      <Form setTasks={setTasks} />
+      <List
+        tasks={tasks}
+        selecionaTarefa={selecionaTarefa}
+      />
+      <Cronometro selecionado={selecionado}/>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../Button';
 import styles from './styles.module.scss';
 import { Itask } from '../../types/tarefa';
+import { v4 as uuidv4 } from 'uuid'; 
 
 
 class Form extends React.Component<{
@@ -14,15 +15,17 @@ class Form extends React.Component<{
 
   adicionarTarefa(evento: React.FormEvent<HTMLFormElement>) {
     evento.preventDefault();
-    this.props.setTasks(tasksAntigas => 
-        [
-            ...tasksAntigas,
-            {
-              task: this.state.task,
-              time: this.state.time,
+    this.props.setTasks(tasksAntigas =>
+      [
+          ...tasksAntigas,
+          {
+              ...this.state,
+              selecionado: false,
+              completado: false,
+              id: uuidv4()
           }
-        ]
-      )
+      ]
+  );
      
     this.setState({
       task: "",
