@@ -1,20 +1,19 @@
 import styles from "./styles.module.scss"
 
-interface ButtonProps {
-    text: string;
+interface Props {
     type?: "button" | "submit" | "reset" | undefined;
     onClick?: () => void;
+    children?: React.ReactNode;
 }
 
-export default function Button(props: ButtonProps) {
-    const { type = "button", onClick } = props;
-    return(
+export default function Button({ onClick, type, children }: Props) {
+    return (
         <button
-        onClick={onClick}
-        type={type}
-        className={styles.button}
+            onClick={onClick}
+            type={type}
+            className={styles.button}
         >
-            {props.text}
+            {children}
         </button>
     )
 }
