@@ -8,8 +8,8 @@ interface Props extends Itask {
 export default function Item({ task, time, selecionado, completado, id, selecionaTarefa }: Props) {
     return (
         <li
-            className={`${styles.item} ${selecionado ? styles.itemSelecionado : ''}`}
-            onClick={() => selecionaTarefa(
+            className={`${styles.item} ${selecionado ? styles.itemSelecionado : ''} ${completado ? styles.itemCompletado : ""}`}
+            onClick={() => !completado && selecionaTarefa(
                 {
                     task,
                     time,
@@ -21,6 +21,7 @@ export default function Item({ task, time, selecionado, completado, id, selecion
         >
             <h3>{task}</h3>
             <span>{time}</span>
+            {completado && <span className={styles.concluido} area-label="tarefa completada"></span>}
         </li>
     )
 }
