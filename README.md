@@ -12,7 +12,7 @@
 <h2 id="layout">🎨 Layout</h2>
 
 <p align="center">
-    <img src="./public/assets/alura-studies.png" alt="Image 1" width="400px">
+    <img src="./public/alura-studies.png" alt="Image 1" width="400px">
 </p>
 
 <h2 id="tech">💻 Technologies</h2>
