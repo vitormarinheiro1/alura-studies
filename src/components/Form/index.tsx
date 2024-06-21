@@ -41,7 +41,7 @@ export default function Form({ setTasks}: Props) {
           id="task"
           value={task}
           onChange={evento => setTask(evento.target.value )}
-          placeholder="O que você quer estudar"
+          placeholder="What do you want to study?"
           required
         />
       </div>
